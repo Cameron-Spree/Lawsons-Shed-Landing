@@ -4,48 +4,48 @@ Ka 0 0 0
 d 1.0
 Ke 0.0
 Kd 0 0 0
-adobe_map_normal Shed/shed_front_Mat_normal.png
+adobe_map_normal shed_front_Mat_normal.png
 Tr 0
 illum 7
 Ks 1 1 1
 adobe_translucence 0.0
-adobe_map_roughness Shed/shed_front_Mat_roughness.png
+adobe_map_roughness shed_front_Mat_roughness.png
 adobe_interior_color 1.0 1.0 1.0
 adobe_density 0.0
-map_Pm Shed/shed_front_Mat_metallic.png
+map_Pm shed_front_Mat_metallic.png
 Ns 16
-map_Kd Shed/shed_front_Mat_baseColor.png
+map_Kd shed_front_Mat_baseColor.png
 newmtl shed_roof_Mat
 Ni 1.6
 Ka 0 0 0
 d 1.0
 Ke 0.0
 Kd 0 0 0
-adobe_map_normal Shed/shed_roof_Mat_normal.png
+adobe_map_normal shed_roof_Mat_normal.png
 Tr 0
 illum 7
 Ks 1 1 1
 adobe_translucence 0.0
-adobe_map_roughness Shed/shed_roof_Mat_roughness.png
+adobe_map_roughness shed_roof_Mat_roughness.png
 adobe_interior_color 1.0 1.0 1.0
 adobe_density 0.0
-map_Pm Shed/shed_roof_Mat_metallic.png
+map_Pm shed_roof_Mat_metallic.png
 Ns 16
-map_Kd Shed/shed_roof_Mat_baseColor.png
+map_Kd shed_roof_Mat_baseColor.png
 newmtl shed_side_walls_Mat
 Ni 1.6
 Ka 0 0 0
 d 1.0
 Ke 0.0
 Kd 0 0 0
-adobe_map_normal Shed/shed_side_walls_Mat_normal.png
+adobe_map_normal shed_side_walls_Mat_normal.png
 Tr 0
 illum 7
 Ks 1 1 1
 adobe_translucence 0.0
-adobe_map_roughness Shed/shed_side_walls_Mat_roughness.png
+adobe_map_roughness shed_side_walls_Mat_roughness.png
 adobe_interior_color 1.0 1.0 1.0
 adobe_density 0.0
-map_Pm Shed/shed_side_walls_Mat_metallic.png
+map_Pm shed_side_walls_Mat_metallic.png
 Ns 16
-map_Kd Shed/shed_side_walls_Mat_baseColor.png
+map_Kd shed_side_walls_Mat_baseColor.png
