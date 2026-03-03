@@ -3,9 +3,10 @@ import React, { useState, useEffect } from 'react';
 export default function ThemeCustomizer() {
     const [isOpen, setIsOpen] = useState(false);
     const [colors, setColors] = useState({
-        primary: '#0a140e',
-        secondary: '#c8a27b',
-        tertiary: '#f4f0e6'
+        primary: '#0F1F15',
+        secondary: '#D4AF37',
+        tertiary: '#F9F9F6',
+        text: '#E0E4E2'
     });
 
     // Apply colors to CSS variables
@@ -13,11 +14,42 @@ export default function ThemeCustomizer() {
         document.documentElement.style.setProperty('--law-green', colors.primary);
         document.documentElement.style.setProperty('--law-yellow', colors.secondary);
         document.documentElement.style.setProperty('--law-offwhite', colors.tertiary);
+        document.documentElement.style.setProperty('--law-text', colors.text);
     }, [colors]);
 
     const handleColorChange = (key, value) => {
         setColors(prev => ({ ...prev, [key]: value }));
     };
+
+    const ColorInput = ({ label, colorKey, value }) => (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+            <span style={{ fontSize: '0.9rem', color: '#ccc' }}>{label}</span>
+            <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                <input
+                    type="color"
+                    value={value}
+                    onChange={(e) => handleColorChange(colorKey, e.target.value)}
+                    style={{ width: '40px', height: '40px', border: 'none', borderRadius: '4px', cursor: 'pointer', background: 'none', padding: 0 }}
+                />
+                <input
+                    type="text"
+                    value={value}
+                    onChange={(e) => handleColorChange(colorKey, e.target.value)}
+                    placeholder="#000000"
+                    style={{
+                        flex: 1,
+                        background: 'rgba(255,255,255,0.1)',
+                        border: '1px solid rgba(255,255,255,0.2)',
+                        borderRadius: '4px',
+                        color: '#fff',
+                        padding: '0.4rem 0.6rem',
+                        fontFamily: 'monospace',
+                        textTransform: 'uppercase'
+                    }}
+                />
+            </div>
+        </div>
+    );
 
     return (
         <div style={{ position: 'fixed', top: '2rem', right: '2rem', zIndex: 9999 }}>
@@ -53,7 +85,7 @@ export default function ThemeCustomizer() {
                     position: 'absolute',
                     top: '3rem',
                     right: '0',
-                    width: '280px',
+                    width: '320px',
                     padding: '1.5rem',
                     marginTop: '1rem',
                     backdropFilter: 'blur(20px)',
@@ -62,40 +94,14 @@ export default function ThemeCustomizer() {
                     <h3 style={{ fontSize: '1.2rem', fontFamily: 'var(--font-heading)', marginBottom: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem' }}>Customize Palette</h3>
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
-
-                        <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                            <span style={{ fontSize: '0.9rem', color: '#ccc' }}>Primary (Backgrounds)</span>
-                            <input
-                                type="color"
-                                value={colors.primary}
-                                onChange={(e) => handleColorChange('primary', e.target.value)}
-                                style={{ width: '40px', height: '40px', border: 'none', borderRadius: '4px', cursor: 'pointer', background: 'none' }}
-                            />
-                        </label>
-
-                        <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                            <span style={{ fontSize: '0.9rem', color: '#ccc' }}>Secondary (Highlights)</span>
-                            <input
-                                type="color"
-                                value={colors.secondary}
-                                onChange={(e) => handleColorChange('secondary', e.target.value)}
-                                style={{ width: '40px', height: '40px', border: 'none', borderRadius: '4px', cursor: 'pointer', background: 'none' }}
-                            />
-                        </label>
-
-                        <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                            <span style={{ fontSize: '0.9rem', color: '#ccc' }}>Tertiary (Text/Accents)</span>
-                            <input
-                                type="color"
-                                value={colors.tertiary}
-                                onChange={(e) => handleColorChange('tertiary', e.target.value)}
-                                style={{ width: '40px', height: '40px', border: 'none', borderRadius: '4px', cursor: 'pointer', background: 'none' }}
-                            />
-                        </label>
+                        <ColorInput label="Primary Background" colorKey="primary" value={colors.primary} />
+                        <ColorInput label="Highlight Accents" colorKey="secondary" value={colors.secondary} />
+                        <ColorInput label="Light Tone" colorKey="tertiary" value={colors.tertiary} />
+                        <ColorInput label="Main Text Color" colorKey="text" value={colors.text} />
                     </div>
 
                     <button
-                        onClick={() => setColors({ primary: '#0a140e', secondary: '#c8a27b', tertiary: '#f4f0e6' })}
+                        onClick={() => setColors({ primary: '#0F1F15', secondary: '#D4AF37', tertiary: '#F9F9F6', text: '#E0E4E2' })}
                         style={{
                             width: '100%',
                             marginTop: '1.5rem',
