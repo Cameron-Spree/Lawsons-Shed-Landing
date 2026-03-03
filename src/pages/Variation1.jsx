@@ -52,7 +52,7 @@ export default function Variation1() {
             <section className="hero-section" style={{ height: '100vh', position: 'relative', overflow: 'hidden' }}>
                 <img
                     className="hero-image"
-                    src="https://images.unsplash.com/photo-1596431940733-a3d8b2e3532c?q=80&w=2560&auto=format&fit=crop"
+                    src="/hero.jpg"
                     alt="Luxury outbuilding"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0, zIndex: 0 }}
                 />
