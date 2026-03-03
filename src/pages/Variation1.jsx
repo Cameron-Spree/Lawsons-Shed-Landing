@@ -75,7 +75,7 @@ export default function Variation1() {
                         <p style={{ fontSize: '1.1rem', lineHeight: 1.8 }}>Every joint, every piece of timber is milled to perfection. Our premium log cabins use a patented stacking system ensuring unparalleled wind and water resistance.</p>
                     </div>
                     <div style={{ flex: 1, height: '60vh', borderRadius: '24px', position: 'relative', overflow: 'hidden' }}>
-                        <img src="https://images.unsplash.com/photo-1510627498534-ebdcececeaa6?q=80&w=1200" alt="Timber detail" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <img src="/shed_hotspots_base_1772530761432.png" alt="Timber detail" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
 
                         {/* Hotspots */}
                         <div className="hotspot" style={{ position: 'absolute', top: '30%', left: '40%', cursor: 'pointer', zIndex: 10 }}>
